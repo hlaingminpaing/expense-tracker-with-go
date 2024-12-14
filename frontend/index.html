@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Expense Tracker</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+    <form id="expense-form">
+      <input type="text" id="description" placeholder="Expense Name" required>
+      <input type="number" id="amount" placeholder="Amount" required>
+      <select id="category">
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Others">Others</option>
+      </select>
+      <input type="date" id="date" required>
+      <button type="submit" id="add-expense-btn">Add Expense</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Expense Name</th>
+          <th>Amount</th>
+          <th>Category</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="expense-table">
+        <!-- Dynamic rows will be added here -->
+      </tbody>
+    </table>
+
+    <div class="summary">
+      <p>Total: $<span id="total-amount">0.00</span></p>
+      <label for="filter-category">Filter by Category: </label>
+      <select id="filter-category">
+        <option value="All">All</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Others">Others</option>
+      </select>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
