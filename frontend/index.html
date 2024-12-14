@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -19,7 +19,7 @@
         <option value="Others">Others</option>
       </select>
       <input type="date" id="date" required>
-      <button type="submit" id="add-expense-btn">Add Expense</button>
+      <button type="submit">Add Expense</button>
     </form>
 
     <table>
@@ -29,31 +29,14 @@
           <th>Amount</th>
           <th>Category</th>
           <th>Date</th>
-          <th>Action</th>
         </tr>
       </thead>
       <tbody id="expense-table">
-        <!-- Dynamic rows will be added here -->
+        <!-- Table rows will be populated dynamically -->
       </tbody>
     </table>
-
-    <div class="summary">
-      <p>Total: $<span id="total-amount">0.00</span></p>
-      <label for="filter-category">Filter by Category: </label>
-      <select id="filter-category">
-        <option value="All">All</option>
-        <option value="Food">Food</option>
-        <option value="Transport">Transport</option>
-        <option value="Shopping">Shopping</option>
-        <option value="Others">Others</option>
-      </select>
-    </div>
   </div>
 
   <script src="app.js"></script>
 </body>
 </html>
-
-
-
-

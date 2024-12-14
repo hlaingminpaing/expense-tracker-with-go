@@ -85,35 +85,6 @@ func GetExpenses(w http.ResponseWriter, r *http.Request) {
 
 /////change for commet | above is working fine///
 
-// func GetExpenses(w http.ResponseWriter, r *http.Request) {
-// 	query := "SELECT id, name, amount, category, date FROM expenses"
-// 	rows, err := config.DB.Query(query)
-// 	if err != nil {
-// 		log.Println("Error executing query:", err) // Log the error
-// 		http.Error(w, `{"error": "Could not fetch expenses"}`, http.StatusInternalServerError)
-// 		return
-// 	}
-// 	defer rows.Close()
-
-// 	var expenses []models.Expense
-
-// 	for rows.Next() {
-// 		var expense models.Expense
-// 		err := rows.Scan(&expense.ID, &expense.Name, &expense.Amount, &expense.Category, &expense.Date)
-// 		if err != nil {
-// 			log.Println("Error scanning row:", err) // Log scanning error
-// 			http.Error(w, `{"error": "Error scanning expenses"}`, http.StatusInternalServerError)
-// 			return
-// 		}
-// 		expenses = append(expenses, expense)
-// 	}
-
-// 	w.Header().Set("Content-Type", "application/json")
-// 	json.NewEncoder(w).Encode(expenses)
-// }
-
-// AddExpense adds a new expense
-
 // ///change for commet | below is working fine///
 func AddExpense(w http.ResponseWriter, r *http.Request) {
 	var expense models.Expense
